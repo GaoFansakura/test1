@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.wheel{
+				position: relative;
+				width: 676px;
+				height: 351px;
+				padding: 0 37px;
+				margin: 0 auto;
+			}
+			.wheel-model{
+				width: 650px;
+				height: 296px;
+				overflow: hidden;
+			}
+			.wheel-title{
+				line-height: 44px;
+				text-indent: 2em;
+			}
+			ul{
+				width: 1500px;
+				height: 100%;
+				transition: .5s all;
+			}
+			ul li{
+				display: inline-block;
+				vertical-align: middle;
+				width: 208px;
+				margin-right: 4px;
+				border:1px solid #ebebeb;
+				border-radius: 10px;
+				overflow: hidden;
+				padding-bottom: 13px;
+			}
+			ul li:last-child{
+				margin-right: 0;
+			}
+			ul li img{
+				
+				height:170px;
+				width:230px;
+				
+				
+				
+			}
+			ul li p:nth-child(2){
+				width: 173px;
+				
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 4;
+				overflow: hidden;
+				color: #5f5ca9;
+				font-size: 16px;
+				line-height: 20px;
+				height: 77px;
+				margin-top:20px;
+				margin-left:65px;
+				
+				
+				
+			}
+			ul li p:nth-child(3){
+				width: 173px;
+				color: #5a6859;
+				font-size: 20px;
+				margin:55px auto 0;
+			    padding:20px 20px;
+				
+				
+			}
+			ul li p:nth-child(4){
+				width: 173px;
+				margin: 16px auto 0;
+				color: #878787;
+				font-size: 12px;
+			}
+			.wheel .btn{
+				position: absolute;
+				left: 40px;
+				top:56%;
+				bottom: 0;
+				right: 0;
+				width: 646px;
+				height: 40px;
+				margin-top: -20px;
+			}
+			.wheel .btn i{
+				position: absolute;
+				top: 0;
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 40px;
+				background: #fff;	
+				box-shadow: 0px 1px 5px 2px #EBEBEB;
+			}
+			.wheel .btn i:nth-child(1){
+				left: -20px;
+			}
+			.wheel .btn i:before{
+				content: "";
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				border-left: 1px solid #000;
+				border-bottom: 1px solid #000;
+				right: -20px;
+				transform: rotateZ(45deg);
+			}
+			.wheel .btn i:nth-child(2){
+				transform: rotateZ(-180deg);
+				right:-20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wheel">
+			<div class="wheel-title">Our Project</div>
+			<div class="wheel-model">
+				
+				<ul>
+					<li>
+						<img src="img/1.jpg"/>
+						<p>
+							health:7<br>
+                            taste:7
+						</p>
+						
+					</li>
+					<li>
+						<img src="img/2.jpg"/>
+						<p>
+							health:5<br>
+                            taste:8
+						</p>
+						
+					</li>
+					<li>
+						<img src="img/3.jpg"/>
+						<p>
+							health:8<br>
+                            taste:5
+						</p>
+						
+					</li>
+					<li>
+						<img src="img/4.jpg"/>
+						<p>
+							health:5<br>
+                            taste:8
+						</p>
+						
+					</li>
+					<li>
+						<img src="img/5.jpg"/>
+						<p>
+							health:8<br>
+                            taste:7
+						</p>
+						
+					</li>
+					<li>
+						<img src="img/6.jpg"/>
+						<p>
+							health:3<br>
+                            taste:7
+						</p>
+						
+					</li>
+					<li>
+						<img src="img/7.jpg"/>
+						<p>
+							health:7<br>
+                            taste:5
+						</p>
+						
+					</li>
+					<li>
+						<img src="img/8.jpg"/>
+						<p>
+							health:4<br>
+                            taste:6
+						</p>
+					</li>
+					<li>
+						<img src="img/9.jpg"/>
+						<p>
+							health:6<br>
+                            taste:4
+						</p>
+						
+					</li>
+					<li>
+						<img src="img/10.jpg"/>
+						<p>
+							health:5<br>
+                            taste:5
+						</p>
+						
+					</li>
+					<li>
+						<img src="img/11.jpg"/>
+						<p>
+							health:2<br>
+                            taste:4
+						</p>
+						
+					</li>
+                    <li>
+                        <img src="img/12.jpg"/>
+                        <p>
+                          health:4<br>
+                          taste:6
+                         </p>
+                    </li>
+                    <li>
+                        <img src="img/13.jpg"/>
+                        <p>
+                           health:8<br>
+                           taste:3
+                         </p>
+                    </li>
+                    <li>
+                       <img src="img/14.jpg"/>
+                       <p>
+                          health:1 <br>
+                          taste:6
+                       </p>
+                    </li>
+				</ul>
+			</div>
+			<div class="btn">
+				<i></i>
+				<i></i>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var lis=document.getElementsByTagName("li");
+		var ul=document.getElementsByTagName("ul")[0];
+		var btns=document.getElementsByTagName("i");
+		var sum=0;
+		var num=0;
+		var cont=0;
+		var x=0;
+		sum=(lis[0].offsetWidth*lis.length)+(lis.length*4)+210;
+		num=Math.ceil(sum/650);
+		console.log(num)
+		ul.style.width=sum+"px";
+			btns[1].onclick=function(){
+				if(x<num-1){
+					x++;
+					cont=-666*x;
+					ul.style.transform="translateX("+cont+"px)";
+				}
+			}
+			btns[0].onclick=function(){
+				if(cont!=0){
+					x--;
+					cont+=666;
+					ul.style.transform="translateX("+cont+"px)";
+				}
+			}
+	</script>
+</html>
